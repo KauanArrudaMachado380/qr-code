@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-}
+@import url(reset.css);
 
 :root{
     --cor-de-fundo: hsl(212, 45%, 89%);
@@ -17,33 +14,28 @@ body{
     background-color: var(--cor-de-fundo);
     height: 100vh;
     font-family: var(--fonte-principal);
-}
-
-.container{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container__caixa{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.container{
+    width: 330px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+    flex-direction: column;
     background-color: var(--cor-primaria);
     border-radius: 20px;
-    width: 330px;
-    height: 530px;
-    box-sizing: border-box;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.007);
 }
 
 .container__imagem{
-    width: 300px;
-    height: 320px;
+    width: 90%;
     border-radius: 10px;
-    margin: 20px;
 }
 
 .container__titulo{
@@ -57,8 +49,33 @@ body{
 .container__texto{
     color: var(--cor-terciaria);
     font-size: 15px;
-    margin: 10px 40px;
-    padding-bottom: 30px;
-    font-weight: 400;
+    margin: 0 40px;
+    padding-bottom: 1.5em;
     text-align: center;
+}
+
+.rodape{
+    margin-top: 2rem;
+}
+
+.rodape__paragrafo{
+    font-family: var(--fonte-paragrafo);
+    font-weight: 300;
+}
+
+.rodape__links{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    .container{
+        width: 350px;
+        height: 500px;
+    }
+
+    .rodape{
+        width: 300px;
+        text-align: center;
+        margin-bottom: 1em;
+    }
 }
